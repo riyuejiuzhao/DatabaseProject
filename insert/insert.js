@@ -148,7 +148,7 @@ function insertCourse(){
 }
 
 function showinsertCourseData(passData){
-    $("#studentInformationTable").append(
+    $("#classInformationTable").append(
         "<tr>\
             <th>"+passData.Cno+"</th>\
             <th>"+passData.Cname+"</th>\
