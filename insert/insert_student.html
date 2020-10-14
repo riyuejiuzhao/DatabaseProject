@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../all_page.css">
+    <link type="text/css" rel="stylesheet" href="../search.css">
+    <title>插入</title>
+</head>
+<body>
+    <div class="leftMenu">
+        <a onclick="leftMenuSearch()" href="javascript:void(0)" id="searchTip" class="fatherTip">查询</a>
+        <a href="../search/search_student.html" id="searchStudent" class="childTip">学生</a>
+        <a href="../search/search_course.html" id="searchCourse" class="childTip">课程</a>
+        <a onclick="leftMenuInsert()" href="javascript:void(0)" id="insertTip" class="fatherTip">插入</a>
+        <a href="../insert/insert_student.html" id="insertStudent" class="childTip">学生</a>
+        <a href="../insert/insert_course.html" id="insertCourse" class="childTip">课程</a>
+        <a href="../insert/insert_course_student.html" id="insertCourseStudent" class="childTip">选课记录</a>
+        <a onclick="leftMenuDelete()" href="javascript:void(0)" id="deleteTip" class="fatherTip">删除</a>
+        <a href="../detele/delete_student.html" id="deleteStudent" class="childTip">学生</a>
+        <a href="../detele/delete_course.html" id="deleteCourse" class="childTip">课程</a>
+        <a href="../detele/delete_course_student.html" id="deleteCourseStudent" class="childTip">选课记录</a>
+        <a onclick="leftMenuAlter()" href="javascript:void(0)" id="alterTip" class="fatherTip">修改</a>
+        <a href="../alter/alter_student.html" id="alterStudent" class="childTip">学生</a>
+        <a href="../alter/alter_course.html" id="alterCourse" class="childTip">课程</a>
+        <a href="../alter/alter_course_student.html" id="alterCourseStudent" class="childTip">选课记录</a>
+        <a href="../root.html" id="alterTip" class="fatherTip">管理员权限</a>
+    </div>
+    <ul class="searchList">
+        <li>
+            学号
+            <input class="kc_con" id="studentNumber" type="text" value="">
+        </li>
+        <li>
+            姓名
+            <input class="kc_con" id="studentName" type="text" value="">
+        </li>
+        <li>
+            性别
+            <select id="studentSex">
+                <option value="" selected="selected">请选择</option>
+                <option value="0">男</option>
+                <option value="1">女</option>
+            </select>
+        </li>
+        <li>
+            年级
+            <select id="sdegree">
+                <option value="" selected="selected">请选择</option>
+                <option value="17">2017级</option>
+                <option value="18">2018级</option>
+                <option value="19">2019级</option>
+                <option value="20">2020级</option>
+            </select>
+        </li>
+        <li>
+            学院简称
+            <select id="sdept">
+                <option value="" selected="selected">请选择</option>
+                <option value="0">历史学院</option>
+                <option value="1">物理学院</option>
+                <option value="2">数学学院</option>
+                <option value="3">艺术学院</option>
+            </select>
+        </li>
+        <li>
+            <div style="position: relative; left: 240px;">
+                <a onclick="insertStudent()" href="javascript:void(0)">插入</a>
+            </div>
+        </li>
+    </ul>
+    <div id="informationIndex">
+        <table id="studentInformationTable"  border="1" cellspacing="0">
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年级</th>
+                <th>学院</th>
+                <th>状态</th>
+            </tr>
+        </table>
+    </div>
+    <script src="../js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/left_page.js" type="text/javascript" charset="utf-8"></script>
+    <script src="insert.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

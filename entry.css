@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1{
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+}
+
+#model{
+    text-align: center;
+    margin: auto;
+    
+    height: 100px;
+    width: 200px;
+
+    font-size: 200%;
+    line-height: 100px;
+    display: none;
+}
+
+.linkModel{
+    display: block;
+    text-decoration: none;
+    background-color: burlywood;
+    color: whitesmoke;
+    margin: 20px auto;
+}
+
+#insert{
+    background-color: lightskyblue;
+}
+
+#alter{
+    background-color: lightskyblue;
+}
