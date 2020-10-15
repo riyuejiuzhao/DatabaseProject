@@ -58,7 +58,7 @@ function showSearchCourseData(res){
         $("#classInformationTable").append("<tr>\
             <td>"+tempCourse.Cno+"</td>\
             <td>"+tempCourse.Cname+"</td>\
-            <td>"+res.Cpno+"</td>\
+            <td>"+tempCourse.Cpno+"</td>\
             <td>"+tempCourse.Cppno+"</td>\
             <td>"+tempCourse.Ccredit+"</td>\
             <td>"+allStudentNumber+"</td>\

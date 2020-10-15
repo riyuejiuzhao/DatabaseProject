@@ -29,7 +29,7 @@ function alterStudent(){
 
     var passData = {
         "Sno" : _sno,
-        "substitude" : JSON.stringify(subsititde)
+        "substitude" : JSON.stringify(substitude)
     }
 
     console.log(passData);
@@ -66,7 +66,7 @@ function alterStudent(){
 }
 
 function showalterStudentData(passData){
-    var student = passData.substitude;
+    var student = eval("("+passData.substitude+")");
     var sno = passData.Sno;
     var sname = (student.Sname == undefined)?"未改变":student.Sname;
     var ssex;
