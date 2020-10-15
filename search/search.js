@@ -44,9 +44,10 @@ function searchCourse(){
 }
 
 function showSearchCourseData(res){
-    $("classInformationTable").empty();
-    $("classInformationTable").append("<tr>\
+    $("#classInformationTable").empty();
+    $("#classInformationTable").append("<tr>\
                     <th>课程代码</th><th>课程名称</th><th>直接先修课程代码</th><th>间接先修课程代码</th>\<th>课程学分</th>\
+                    <th>选课学生学号</th>\
                 </tr>");
     for(var i=0;i<res.length;i++){
         var tempCourse = res[i];
@@ -54,7 +55,7 @@ function showSearchCourseData(res){
         for(var j=0;j<tempCourse.students.length;j++){
             allStudentNumber = allStudentNumber+tempCourse.students[j].Sno+"\n";
         }
-        $("classInformationTable").append("<tr>\
+        $("#classInformationTable").append("<tr>\
             <td>"+tempCourse.Cno+"</td>\
             <td>"+tempCourse.Cname+"</td>\
             <td>"+res.Cpno+"</td>\
