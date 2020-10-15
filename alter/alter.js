@@ -189,7 +189,7 @@ function alterCourse(){
 }
 
 function showalterCourseData(passData){
-    var course = passData.substitude;
+    var course = eval("("+passData.substitude+")");
     var cno = passData.Cno;
     var cname = (course.Cname == undefined)?"未修改":course.Cname;
     var cpno = (course.Cpno == undefined)?"未修改":course.Cpno;
