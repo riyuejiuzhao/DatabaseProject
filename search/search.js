@@ -179,7 +179,7 @@ function num2dept(num){
     else if(num=="2"){
         return "数学学院";
     }
-    else if(numb=="3"){
+    else if(num=="3"){
         return "艺术学院";
     }
     else {
