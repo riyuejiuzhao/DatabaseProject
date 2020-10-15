@@ -58,8 +58,8 @@ function showSearchCourseData(res){
             <td>"+tempCourse.Cno+"</td>\
             <td>"+tempCourse.Cname+"</td>\
             <td>"+res.Cpno+"</td>\
-            <td>"+temp.Cppno+"</td>\
-            <td>"+temp.Ccredit+"</td>\
+            <td>"+tempCourse.Cppno+"</td>\
+            <td>"+tempCourse.Ccredit+"</td>\
             <td>"+allStudentNumber+"</td>\
         </tr>");
     }
