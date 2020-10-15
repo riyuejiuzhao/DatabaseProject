@@ -151,8 +151,8 @@ function showSearchStudentData(res){
         <td>"+num2degree(tempStudent.Sdegree)+"</td>\
         <td>"+num2dept(tempStudent.Sdept)+"</td>\
         <td>"+bool2pass(tempStudent.allPassed)+"</td>\
-        <td>"+tempStudent.courses+"</td>\
-        <td>"+tempStudent.failedCourses+"</td>\
+        <td>"+courseData(tempStudent.courses)+"</td>\
+        <td>"+failedCoursesData(tempStudent.failedCourses)+"</td>\
         </tr>")
     }
 }
@@ -166,7 +166,7 @@ function num2degree(num){
 }
 
 function bool2pass(bool){
-    return (bool)?"有":"无";
+    return (bool)?"无":"有";
 }
 
 function num2dept(num){
@@ -185,4 +185,21 @@ function num2dept(num){
     else {
         return "错误学院";
     }
+}
+
+function courseData(courses){
+    var result = "";
+    for(var i=0;i<courses.length;i++){
+        result += (courses.Cno + ";\n");
+    }
+    return result;
+}
+
+function failedCoursesData(failedCourses){
+    var result = "";
+    for(var i=0;i<failedCourses.length;i++){
+        result += (failedCourses.Cno + "\n");
+    }
+    return result;
+
 }
