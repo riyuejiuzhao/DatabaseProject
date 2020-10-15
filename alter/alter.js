@@ -5,6 +5,7 @@ function alterStudent(){
     var _sdegree = $("#sdegree").val();
     var _sdept = $("#sdept").val();
     var _allpassed = $("#allpassed").val();
+    var subsititde = {};
 
     if(_sno == ""){
         alert("未填写学生学号");
@@ -12,7 +13,7 @@ function alterStudent(){
     }
     var passData = {
         "Sno" : _sno,
-        "substitude" : {}
+        "substitude" : subsititde
     }
     if(_sname!=""){
         passData.substitude.Sname = _sname;
@@ -126,13 +127,14 @@ function alterCourse(){
     var _cname = $("#courseName").val();
     var _cpno = $("#cpno").val();
     var _credit = $("#credit").val();
+    var substitude = {};
     if(_cno == ""){
         alert("没有填写课程代码");
         return;
     }
     passData = {
         "Cno":_cno,
-        "substitude":{}
+        "substitude":substitude
     };
     if(_cname != ""){
         passData.substitude.Cname = _cname;

@@ -6,7 +6,7 @@ function deleteAll(){
     $.ajax(
         {
             url:"http://127.0.0.1/eduAdminSys/specialRequest",
-            type:"post",
+            type:"get",
             data:passData,
             dataType:"json",
             success:function(data){
@@ -39,7 +39,7 @@ function deleteCourseStudent(){
     $.ajax(
         {
             url:"http://127.0.0.1/eduAdminSys/specialRequest",
-            type:"post",
+            type:"get",
             data:passData,
             dataType:"json",
             success:function(data){
@@ -73,7 +73,7 @@ function deleteGrade(){
     $.ajax(
         {
             url:"http://127.0.0.1/eduAdminSys/specialRequest",
-            type:"post",
+            type:"get",
             data:passData,
             dataType:"json",
             success:function(data){
@@ -106,7 +106,7 @@ function doubleGrade(){
     $.ajax(
         {
             url:"http://127.0.0.1/eduAdminSys/specialRequest",
-            type:"post",
+            type:"get",
             data:passData,
             dataType:"json",
             success:function(data){
