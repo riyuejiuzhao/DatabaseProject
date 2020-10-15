@@ -5,31 +5,33 @@ function alterStudent(){
     var _sdegree = $("#sdegree").val();
     var _sdept = $("#sdept").val();
     var _allpassed = $("#allpassed").val();
-    var subsititde = {};
+    var substitude = {};
 
     if(_sno == ""){
         alert("未填写学生学号");
         return;
     }
-    var passData = {
-        "Sno" : _sno,
-        "substitude" : subsititde
-    }
     if(_sname!=""){
-        passData.substitude.Sname = _sname;
+        substitude.Sname = _sname;
     }
     if(_ssex!=""){
-        passData.substitude.Ssex = Number(_ssex);
+        substitude.Ssex = Number(_ssex);
     }
     if(_sdegree!=""){
-        passData.substitude.Sdegree = _sdegree;
+        substitude.Sdegree = _sdegree;
     }
     if(_sdept!=""){
-        passData.substitude.Sdept = _sdept;
+        substitude.Sdept = _sdept;
     }
     if(_allpassed!=""){
-        passData.substitude.allPassed = (_allpassed == "0");
+        substitude.allPassed = (_allpassed == "0");
     }
+
+    var passData = {
+        "Sno" : _sno,
+        "substitude" : JSON.stringify(subsititde)
+    }
+
     console.log(passData);
     $.ajax(
         {
@@ -112,12 +114,12 @@ function showalterStudentData(passData){
     }
     $("#studentInformationTable").append(
         "<tr>\
-            <th>"+sno+"</th>\
-            <th>"+sname+"</th>\
-            <th>"+ssex+"</th>\
-            <th>"+sdegree+"</th>\
-            <th>"+sdept+"</th>\
-            <th>"+allpassed+"</th>\
+            <td>"+sno+"</td>\
+            <td>"+sname+"</td>\
+            <td>"+ssex+"</td>\
+            <td>"+sdegree+"</td>\
+            <td>"+sdept+"</td>\
+            <td>"+allpassed+"</td>\
         </tr>"
     )
 }
@@ -132,15 +134,11 @@ function alterCourse(){
         alert("没有填写课程代码");
         return;
     }
-    passData = {
-        "Cno":_cno,
-        "substitude":substitude
-    };
     if(_cname != ""){
-        passData.substitude.Cname = _cname;
+        substitude.Cname = _cname;
     }
     if(_cpno != ""){
-        passData.substitude.Cpno = _cpno;
+        substitude.Cpno = _cpno;
     }
     if(_credit != ""){
         _credit = Number(_credit);
@@ -148,8 +146,12 @@ function alterCourse(){
             alert("学分格式不正确");
             return;
         }
-        passData.substitude.Ccredit = _credit;
+        substitude.Ccredit = _credit;
     }
+    passData = {
+        "Cno":_cno,
+        "substitude":JSON.stringify(substitude)
+    };
     console.log(passData);
     $.ajax(
         {
