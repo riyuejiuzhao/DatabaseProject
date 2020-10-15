@@ -190,7 +190,7 @@ function num2dept(num){
 function courseData(courses){
     var result = "";
     for(var i=0;i<courses.length;i++){
-        result += (courses.Cno + ";\n");
+        result += (courses[i].Cno + ";\n");
     }
     return result;
 }
@@ -198,7 +198,7 @@ function courseData(courses){
 function failedCoursesData(failedCourses){
     var result = "";
     for(var i=0;i<failedCourses.length;i++){
-        result += (failedCourses.Cno + "\n");
+        result += (failedCourses[i].Cno + "\n");
     }
     return result;
 
